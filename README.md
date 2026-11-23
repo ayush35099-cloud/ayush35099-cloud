@@ -108,91 +108,98 @@ status: Strengthening core fundamentals & preparing for internship opportunities
   <img src="https://raw.githubusercontent.com/ayush35099-cloud/ayush35099-cloud/main/assets/separator.svg" width="100%" alt="Divider" />
 </p>
 
-## 🚀 Featured Projects
+## 🚀 My Projects – Ranked by Development Activity
+
+<!-- PROJECTS-START -->
+
+<div align="center">
+  <p><i>Projects dynamically ordered by total personal development commits authored by <b>@ayush35099-cloud</b> (including feature branch merges).</i></p>
+</div>
 
 <table width="100%">
   <tr>
-    <td width="50%" valign="top">
-      <h3 align="left">🛍️ BharatStore (BharatKart)</h3>
-      <p><b>Cloud-Native Enterprise E-Commerce & Retail Marketplace</b></p>
-      <p>A scalable omni-channel marketplace platform connecting regional mega-stores and fulfillment hubs across India into a unified digital commerce engine.</p>
-      <ul>
-        <li>⚡ Real-time product browsing, shopping cart, and order checkout flows</li>
-        <li>🔄 Event-driven messaging pipeline powered by Apache Kafka</li>
-        <li>🔍 High-performance search and catalog indexing with OpenSearch</li>
-        <li>🛡️ Secure backend architecture with PostgreSQL & SQLite support</li>
-      </ul>
-      <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-        <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask" />
-        <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-        <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white" alt="Kafka" />
-      </p>
+    <td width="100%" valign="top">
+      <h3>🥇 1. <a href="https://github.com/ayush35099-cloud/BharatStore">BharatStore (BharatKart)</a></h3>
+      <p><b>Cloud-Native Enterprise E-Commerce & Retail Marketplace Platform</b></p>
+      <p>A cloud-native omni-channel marketplace platform connecting regional mega-stores and fulfillment hubs across India into a unified digital commerce engine. Features real-time catalog indexing, shopping cart, and order processing.</p>
+      <p><b>💻 Tech Stack:</b> <code>Python, Flask 3.0, PostgreSQL, SQLite, Apache Kafka, OpenSearch 2.x, HTML5, CSS3</code></p>
+      <p><b>🔥 Personal Activity:</b> <img src="https://img.shields.io/badge/My_Commits-54_Commits-00FF99?style=flat-square&logo=git&logoColor=0D1117" alt="Commits" /> &bull; <i>Rank #1 by commit volume</i></p>
+      <p><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask" /> <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" /> <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white" alt="Kafka" /></p>
       <p>
         <a href="https://github.com/ayush35099-cloud/BharatStore">
           <img src="https://img.shields.io/badge/View_Repository-00FF99?style=for-the-badge&logo=github&logoColor=0D1117" alt="View Repository" />
         </a>
       </p>
     </td>
-    <td width="50%" valign="top">
-      <h3 align="left">🎓 PredictED</h3>
-      <p><b>AI-Powered Academic Intelligence & Attendance Analytics Dashboard</b></p>
-      <p>An intelligent academic companion designed for university students to track academic commitments and dynamically predict attendance thresholds.</p>
-      <ul>
-        <li>📊 Smart bunk margin calculator & attendance percentage analytics</li>
-        <li>⚠️ Automated warning triggers before falling below attendance thresholds</li>
-        <li>📅 Interactive timetable organizer & assignment deadline manager</li>
-        <li>🤖 AI-assisted study companion to boost daily academic productivity</li>
-      </ul>
+  </tr>
+  <tr>
+    <td width="100%" valign="top">
+      <h3>🥈 2. <a href="https://github.com/ayush35099-cloud/Ckd-Screening-System">RenalCare: Chronic Kidney Disease (CKD) Screening System</a></h3>
+      <p><b>Clinical ML Decision-Support Platform for Early Detection</b></p>
+      <p>An applied machine learning decision-support platform designed to assist healthcare workers in Primary Health Centres (PHCs) and community diagnostic camps detect early physiological markers of Chronic Kidney Disease (CKD) using 24 routine laboratory parameters.</p>
+      <p><b>💻 Tech Stack:</b> <code>Python 3.10+, Flask 3.0, Scikit-Learn 1.7, Machine Learning, Clinical Decision Support</code></p>
+      <p><b>🔥 Personal Activity:</b> <img src="https://img.shields.io/badge/My_Commits-11_Commits-00FF99?style=flat-square&logo=git&logoColor=0D1117" alt="Commits" /> &bull; <i>Rank #2 by commit volume</i></p>
+      <p><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" /> <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask" /> <img src="https://img.shields.io/badge/Scikit-Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" /> <img src="https://img.shields.io/badge/Healthcare ML-00FF99?style=flat-square&logo=python&logoColor=0D1117" alt="Healthcare ML" /></p>
       <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-        <img src="https://img.shields.io/badge/Data_Science-150458?style=flat-square&logo=pandas&logoColor=white" alt="Data Science" />
-        <img src="https://img.shields.io/badge/AI_Analytics-00FF99?style=flat-square&logo=scikit-learn&logoColor=0D1117" alt="AI Analytics" />
-        <img src="https://img.shields.io/badge/Web_UI-61DAFB?style=flat-square&logo=react&logoColor=black" alt="Web UI" />
-      </p>
-      <p>
-        <a href="https://github.com/ayush35099-cloud">
-          <img src="https://img.shields.io/badge/Academic_Project-BC8CFF?style=for-the-badge&logo=github&logoColor=0D1117" alt="Academic Project" />
+        <a href="https://github.com/ayush35099-cloud/Ckd-Screening-System">
+          <img src="https://img.shields.io/badge/View_Repository-00FF99?style=for-the-badge&logo=github&logoColor=0D1117" alt="View Repository" />
         </a>
       </p>
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
-      <h3 align="left">🏫 Smart Campus Management</h3>
-      <p><b>Comprehensive Student Attendance & Academic Portal</b></p>
-      <p>A centralized university management portal engineered to streamline attendance calculations, student eligibility tracking, and academic administrative records.</p>
-      <ul>
-        <li>📋 Student attendance computation and real-time percentage indicators</li>
-        <li>🔔 Automated eligibility notifications for exams and mandatory criteria</li>
-        <li>🧑‍🏫 Dedicated portal interfaces for student profiles and teachers</li>
-        <li>📱 Fully responsive frontend interface for quick campus mobile access</li>
-      </ul>
+    <td width="100%" valign="top">
+      <h3>🥉 3. <a href="https://github.com/ayush35099-cloud/PYTHON_PROJECT1">Campus Academic Portal & Authentication Suite</a></h3>
+      <p><b>Role-Based Academic Management & User Verification System</b></p>
+      <p>A modular academic role-based web application providing dedicated student and faculty portals, secure session validation, student attendance management, and administrative dashboards.</p>
+      <p><b>💻 Tech Stack:</b> <code>JavaScript, HTML5, CSS3, Session Auth</code></p>
+      <p><b>🔥 Personal Activity:</b> <img src="https://img.shields.io/badge/My_Commits-5_Commits-00FF99?style=flat-square&logo=git&logoColor=0D1117" alt="Commits" /> &bull; <i>Rank #3 by commit volume</i></p>
+      <p><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" /></p>
       <p>
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+        <a href="https://github.com/ayush35099-cloud/PYTHON_PROJECT1">
+          <img src="https://img.shields.io/badge/View_Repository-00FF99?style=for-the-badge&logo=github&logoColor=0D1117" alt="View Repository" />
+        </a>
       </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" valign="top">
+      <h3>4️⃣ 4. <a href="https://github.com/ayush35099-cloud/ToDoList">TaskFlow: Interactive Productivity & Task Management</a></h3>
+      <p><b>Modern Task Tracker & Productivity Organizer</b></p>
+      <p>A lightweight, responsive task and workflow management application designed for developers and students to schedule priorities, monitor completion status, and maintain daily momentum.</p>
+      <p><b>💻 Tech Stack:</b> <code>JavaScript, CSS3, HTML5, Local Storage</code></p>
+      <p><b>🔥 Personal Activity:</b> <img src="https://img.shields.io/badge/My_Commits-4_Commits-00FF99?style=flat-square&logo=git&logoColor=0D1117" alt="Commits" /> &bull; <i>Rank #4 by commit volume</i></p>
+      <p><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" /></p>
+      <p>
+        <a href="https://github.com/ayush35099-cloud/ToDoList">
+          <img src="https://img.shields.io/badge/View_Repository-00FF99?style=for-the-badge&logo=github&logoColor=0D1117" alt="View Repository" />
+        </a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" valign="top">
+      <h3>5️⃣ 5. <a href="https://github.com/ayush35099-cloud/smart_campus_final_v2">Smart Campus Attendance Management System</a></h3>
+      <p><b>Student Attendance Calculation & Eligibility Notification Engine</b></p>
+      <p>A university management interface engineered to automate attendance calculation, track course percentage thresholds, and generate eligibility notifications for examinations.</p>
+      <p><b>💻 Tech Stack:</b> <code>JavaScript, HTML5, CSS3, Responsive Design</code></p>
+      <p><b>🔥 Personal Activity:</b> <img src="https://img.shields.io/badge/My_Commits-2_Commits-00FF99?style=flat-square&logo=git&logoColor=0D1117" alt="Commits" /> &bull; <i>Rank #5 by commit volume</i></p>
+      <p><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" /></p>
       <p>
         <a href="https://github.com/ayush35099-cloud/smart_campus_final_v2">
           <img src="https://img.shields.io/badge/View_Repository-00FF99?style=for-the-badge&logo=github&logoColor=0D1117" alt="View Repository" />
         </a>
       </p>
     </td>
-    <td width="50%" valign="top">
-      <h3 align="left">📈 Habit Tracker & Productivity</h3>
-      <p><b>Goal Setting & Consistency Streak Analytics</b></p>
-      <p>A productivity application designed to empower students and developers to construct disciplined routines, build habits, and monitor consistency streaks.</p>
-      <ul>
-        <li>🔥 Dynamic daily streak counter and habit completion logging</li>
-        <li>🎯 Categorized routine tracking with progress visualization</li>
-        <li>⚡ Lightweight, responsive web interface built for high daily focus</li>
-      </ul>
-      <p>
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-      </p>
+  </tr>
+  <tr>
+    <td width="100%" valign="top">
+      <h3>6️⃣ 6. <a href="https://github.com/ayush35099-cloud/-Habit-Tracker">Habit Tracker & Streak Analytics</a></h3>
+      <p><b>Goal Setting & Daily Consistency Engine</b></p>
+      <p>An interactive routine management web application built to help users establish consistent habits, track consecutive day streaks, and visualize productivity milestones.</p>
+      <p><b>💻 Tech Stack:</b> <code>JavaScript, CSS3, HTML5</code></p>
+      <p><b>🔥 Personal Activity:</b> <img src="https://img.shields.io/badge/My_Commits-1_Commits-00FF99?style=flat-square&logo=git&logoColor=0D1117" alt="Commits" /> &bull; <i>Rank #6 by commit volume</i></p>
+      <p><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" /></p>
       <p>
         <a href="https://github.com/ayush35099-cloud/-Habit-Tracker">
           <img src="https://img.shields.io/badge/View_Repository-00FF99?style=for-the-badge&logo=github&logoColor=0D1117" alt="View Repository" />
@@ -201,6 +208,25 @@ status: Strengthening core fundamentals & preparing for internship opportunities
     </td>
   </tr>
 </table>
+
+<table width="100%">
+  <tr>
+    <td width="100%" valign="top">
+      <h3>🌟 Flagship Academic AI System: PredictED</h3>
+      <p><b>AI-Powered Academic Intelligence & Bunk Margin Predictor Dashboard</b></p>
+      <p>An intelligent academic decision dashboard engineered for university students. Features smart attendance analytics, predictive bunk calculations, automated threshold warning notifications, timetable scheduling, and an interactive AI study companion.</p>
+      <p><b>💻 Tech Stack:</b> <code>Python, Pandas, Scikit-Learn, Modern Web UI, AI Analytics</code></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />
+        <img src="https://img.shields.io/badge/AI_Analytics-00FF99?style=flat-square&logo=google&logoColor=0D1117" alt="AI Analytics" />
+        <img src="https://img.shields.io/badge/Academic_Project-BC8CFF?style=flat-square&logo=github&logoColor=0D1117" alt="Academic" />
+      </p>
+    </td>
+  </tr>
+</table>
+
+<!-- PROJECTS-END -->
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ayush35099-cloud/ayush35099-cloud/main/assets/separator.svg" width="100%" alt="Divider" />
