@@ -35,7 +35,6 @@ def github_request(url, token=None):
 
 def count_personal_commits(repo_name, username="ayush35099-cloud", token=None):
     page = 1
-    total_commits = 0
     my_commits = 0
     
     while True:
@@ -43,7 +42,6 @@ def count_personal_commits(repo_name, username="ayush35099-cloud", token=None):
         commits = github_request(url, token)
         if not commits or not isinstance(commits, list) or len(commits) == 0:
             break
-        total_commits += len(commits)
         for c in commits:
             author_obj = c.get('author') or {}
             author_login = (author_obj.get('login') or '').lower()
@@ -61,11 +59,12 @@ def count_personal_commits(repo_name, username="ayush35099-cloud", token=None):
         
     return my_commits
 
-PROJECT_METADATA = {
+# Registry of major candidate projects evaluated for profile showcase
+MAJOR_PROJECTS_REGISTRY = {
     "BharatStore": {
         "display_name": "BharatStore (BharatKart)",
         "tagline": "Cloud-Native Enterprise E-Commerce & Retail Marketplace Platform",
-        "description": "A cloud-native omni-channel marketplace platform connecting regional mega-stores and fulfillment hubs across India into a unified digital commerce engine. Features real-time catalog indexing, shopping cart, and order processing.",
+        "description": "A cloud-native omni-channel marketplace platform connecting regional mega-stores and fulfillment hubs across India into a unified digital commerce engine. Engineered with event-driven messaging pipelines, real-time inventory synchronization, and distributed search indexing.",
         "tech_stack": "Python, Flask 3.0, PostgreSQL, SQLite, Apache Kafka, OpenSearch 2.x, HTML5, CSS3",
         "badges": [
             ("Python", "3776AB", "python", "white"),
@@ -73,7 +72,10 @@ PROJECT_METADATA = {
             ("PostgreSQL", "316192", "postgresql", "white"),
             ("Kafka", "231F20", "apache-kafka", "white")
         ],
-        "demo_url": None
+        "repo_url": "https://github.com/ayush35099-cloud/BharatStore",
+        "demo_url": None,
+        "is_major": True,
+        "primary_repos": ["BharatStore"]
     },
     "Ckd-Screening-System": {
         "display_name": "RenalCare: Chronic Kidney Disease (CKD) Screening System",
@@ -86,70 +88,55 @@ PROJECT_METADATA = {
             ("Scikit-Learn", "F7931E", "scikit-learn", "white"),
             ("Healthcare ML", "00FF99", "python", "0D1117")
         ],
-        "demo_url": None
+        "repo_url": "https://github.com/ayush35099-cloud/Ckd-Screening-System",
+        "demo_url": None,
+        "is_major": True,
+        "primary_repos": ["Ckd-Screening-System"]
     },
-    "PYTHON_PROJECT1": {
-        "display_name": "Campus Academic Portal & Authentication Suite",
-        "tagline": "Role-Based Academic Management & User Verification System",
-        "description": "A modular academic role-based web application providing dedicated student and faculty portals, secure session validation, student attendance management, and administrative dashboards.",
-        "tech_stack": "JavaScript, HTML5, CSS3, Session Auth",
+    "Smart-Campus": {
+        "display_name": "Smart Campus Management & Student Attendance Portal",
+        "tagline": "Comprehensive Student Attendance & Academic Portal",
+        "description": "A centralized university academic portal engineered to automate student attendance computation, track course threshold eligibility, issue examination admittance notifications, and provide dedicated student and faculty session management.",
+        "tech_stack": "JavaScript, HTML5, CSS3, Responsive Design, Session Auth",
         "badges": [
             ("JavaScript", "F7DF1E", "javascript", "black"),
             ("HTML5", "E34F26", "html5", "white"),
             ("CSS3", "1572B6", "css3", "white")
         ],
-        "demo_url": None
+        "repo_url": "https://github.com/ayush35099-cloud/smart_campus_final_v2",
+        "demo_url": None,
+        "is_major": True,
+        "primary_repos": ["smart_campus_final_v2", "PYTHON_PROJECT1"]
     },
-    "ToDoList": {
-        "display_name": "TaskFlow: Interactive Productivity & Task Management",
-        "tagline": "Modern Task Tracker & Productivity Organizer",
-        "description": "A lightweight, responsive task and workflow management application designed for developers and students to schedule priorities, monitor completion status, and maintain daily momentum.",
-        "tech_stack": "JavaScript, CSS3, HTML5, Local Storage",
+    "PredictED": {
+        "display_name": "PredictED: AI Academic Intelligence Dashboard",
+        "tagline": "AI-Powered Academic Analytics & Bunk Margin Prediction System",
+        "description": "An intelligent academic companion and decision dashboard engineered for university students. Features smart attendance analytics, predictive bunk calculations, automated threshold warning alerts, timetable scheduling, and an interactive AI study companion.",
+        "tech_stack": "Python, Pandas, Scikit-Learn, Modern Web UI, AI Analytics",
         "badges": [
-            ("JavaScript", "F7DF1E", "javascript", "black"),
-            ("HTML5", "E34F26", "html5", "white"),
-            ("CSS3", "1572B6", "css3", "white")
+            ("Python", "3776AB", "python", "white"),
+            ("Scikit-Learn", "F7931E", "scikit-learn", "white"),
+            ("AI Analytics", "00FF99", "google", "0D1117"),
+            ("Academic AI", "BC8CFF", "github", "0D1117")
         ],
-        "demo_url": None
-    },
-    "smart_campus_final_v2": {
-        "display_name": "Smart Campus Attendance Management System",
-        "tagline": "Student Attendance Calculation & Eligibility Notification Engine",
-        "description": "A university management interface engineered to automate attendance calculation, track course percentage thresholds, and generate eligibility notifications for examinations.",
-        "tech_stack": "JavaScript, HTML5, CSS3, Responsive Design",
-        "badges": [
-            ("JavaScript", "F7DF1E", "javascript", "black"),
-            ("HTML5", "E34F26", "html5", "white"),
-            ("CSS3", "1572B6", "css3", "white")
-        ],
-        "demo_url": None
-    },
-    "-Habit-Tracker": {
-        "display_name": "Habit Tracker & Streak Analytics",
-        "tagline": "Goal Setting & Daily Consistency Engine",
-        "description": "An interactive routine management web application built to help users establish consistent habits, track consecutive day streaks, and visualize productivity milestones.",
-        "tech_stack": "JavaScript, CSS3, HTML5",
-        "badges": [
-            ("JavaScript", "F7DF1E", "javascript", "black"),
-            ("HTML5", "E34F26", "html5", "white"),
-            ("CSS3", "1572B6", "css3", "white")
-        ],
-        "demo_url": None
+        "repo_url": "https://github.com/ayush35099-cloud",
+        "demo_url": None,
+        "is_major": True,
+        "primary_repos": []
     }
 }
 
-MEDALS = ["🥇", "🥈", "🥉", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣"]
+MEDALS = ["🥇", "🥈", "🥉", "4️⃣"]
 
-def generate_projects_markdown(projects_ranked):
+def generate_top_4_markdown(projects_ranked):
     lines = []
     lines.append('<div align="center">\n')
-    lines.append('  <p><i>Projects dynamically ordered by total personal development commits authored by <b>@ayush35099-cloud</b> (including feature branch merges).</i></p>\n')
+    lines.append('  <p><i>Featured showcase of exactly <b>four major development projects</b>, evaluated and ranked strictly by verified development activity and personal commit volume.</i></p>\n')
     lines.append('</div>\n\n')
     
     lines.append('<table width="100%">\n')
     
-    # We will lay them out in 2-column or clean rows
-    for i, p in enumerate(projects_ranked):
+    for i, p in enumerate(projects_ranked[:4]):
         medal = MEDALS[i] if i < len(MEDALS) else f"#{i+1}"
         rank_num = i + 1
         name = p['display_name']
@@ -157,6 +144,7 @@ def generate_projects_markdown(projects_ranked):
         desc = p['description']
         tech = p['tech_stack']
         commits = p['commits']
+        commit_str = f"{commits} Commits" if commits > 0 else "Active Flagship"
         repo_url = p['repo_url']
         badges = p['badges']
         
@@ -171,7 +159,7 @@ def generate_projects_markdown(projects_ranked):
         lines.append(f'      <p><b>{tagline}</b></p>\n')
         lines.append(f'      <p>{desc}</p>\n')
         lines.append(f'      <p><b>💻 Tech Stack:</b> <code>{tech}</code></p>\n')
-        lines.append(f'      <p><b>🔥 Personal Activity:</b> <img src="https://img.shields.io/badge/My_Commits-{commits}_Commits-00FF99?style=flat-square&logo=git&logoColor=0D1117" alt="Commits" /> &bull; <i>Rank #{rank_num} by commit volume</i></p>\n')
+        lines.append(f'      <p><b>🔥 Personal Activity:</b> <img src="https://img.shields.io/badge/My_Commits-{commit_str.replace(" ", "_")}-00FF99?style=flat-square&logo=git&logoColor=0D1117" alt="Commits" /> &bull; <i>Rank #{rank_num} by development activity</i></p>\n')
         lines.append(f'      <p>{badge_html}</p>\n')
         lines.append('      <p>\n')
         lines.append(f'        <a href="{repo_url}">\n')
@@ -185,26 +173,7 @@ def generate_projects_markdown(projects_ranked):
         lines.append('    </td>\n')
         lines.append('  </tr>\n')
         
-    lines.append('</table>\n\n')
-    
-    # Also add the spotlight card for PredictED (Flagship AI Academic System)
-    lines.append('<table width="100%">\n')
-    lines.append('  <tr>\n')
-    lines.append('    <td width="100%" valign="top">\n')
-    lines.append('      <h3>🌟 Flagship Academic AI System: PredictED</h3>\n')
-    lines.append('      <p><b>AI-Powered Academic Intelligence & Bunk Margin Predictor Dashboard</b></p>\n')
-    lines.append('      <p>An intelligent academic decision dashboard engineered for university students. Features smart attendance analytics, predictive bunk calculations, automated threshold warning notifications, timetable scheduling, and an interactive AI study companion.</p>\n')
-    lines.append('      <p><b>💻 Tech Stack:</b> <code>Python, Pandas, Scikit-Learn, Modern Web UI, AI Analytics</code></p>\n')
-    lines.append('      <p>\n')
-    lines.append('        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />\n')
-    lines.append('        <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />\n')
-    lines.append('        <img src="https://img.shields.io/badge/AI_Analytics-00FF99?style=flat-square&logo=google&logoColor=0D1117" alt="AI Analytics" />\n')
-    lines.append('        <img src="https://img.shields.io/badge/Academic_Project-BC8CFF?style=flat-square&logo=github&logoColor=0D1117" alt="Academic" />\n')
-    lines.append('      </p>\n')
-    lines.append('    </td>\n')
-    lines.append('  </tr>\n')
     lines.append('</table>\n')
-    
     return "".join(lines)
 
 def update_readme(repo_dir=None):
@@ -215,32 +184,39 @@ def update_readme(repo_dir=None):
     token = get_token()
     username = "ayush35099-cloud"
     
-    print(f"Inspecting commit counts for {username}...")
-    project_counts = []
+    print(f"Evaluating top major projects for {username}...")
+    project_scores = []
     
-    for repo_name, meta in PROJECT_METADATA.items():
-        count = count_personal_commits(repo_name, username, token)
-        print(f"-> {repo_name}: {count} personal commits")
-        project_counts.append({
-            "repo_name": repo_name,
+    for proj_id, meta in MAJOR_PROJECTS_REGISTRY.items():
+        total_commits = 0
+        for r in meta["primary_repos"]:
+            c = count_personal_commits(r, username, token)
+            print(f"  -> [{proj_id}] {r}: {c} commits")
+            total_commits += c
+            
+        project_scores.append({
+            "proj_id": proj_id,
             "display_name": meta["display_name"],
             "tagline": meta["tagline"],
             "description": meta["description"],
             "tech_stack": meta["tech_stack"],
             "badges": meta["badges"],
             "demo_url": meta.get("demo_url"),
-            "commits": count,
-            "repo_url": f"https://github.com/{username}/{repo_name}"
+            "commits": total_commits,
+            "repo_url": meta["repo_url"]
         })
         
-    # Sort by commit count descending!
-    project_counts.sort(key=lambda x: x["commits"], reverse=True)
+    # Sort strictly by commit count descending!
+    project_scores.sort(key=lambda x: x["commits"], reverse=True)
     
-    print("\nFinal Ranked Order:")
-    for rank, p in enumerate(project_counts, 1):
-        print(f"{rank}. {p['display_name']} - {p['commits']} commits")
+    # Select exactly the top 4
+    top_4_projects = project_scores[:4]
+    
+    print("\nSelected Top 4 Major Projects (Ranked):")
+    for rank, p in enumerate(top_4_projects, 1):
+        print(f"  Rank #{rank}: {p['display_name']} ({p['commits']} commits)")
         
-    new_content = generate_projects_markdown(project_counts)
+    new_content = generate_top_4_markdown(top_4_projects)
     
     with open(readme_path, "r", encoding="utf-8") as f:
         readme_text = f.read()
@@ -251,25 +227,16 @@ def update_readme(repo_dir=None):
     if "<!-- PROJECTS-START -->" in readme_text:
         updated_readme = re.sub(pattern, replacement, readme_text, flags=re.DOTALL)
     else:
-        # If markers don't exist yet, insert around the projects section
-        projects_section_header = "## 🚀 Featured Projects"
-        if projects_section_header in readme_text:
-            parts = readme_text.split(projects_section_header)
-            # Find the next separator or section
-            next_part = parts[1]
-            sep_idx = next_part.find('<p align="center">\n  <img src="https://raw.githubusercontent.com/ayush35099-cloud/ayush35099-cloud/main/assets/separator.svg"')
-            if sep_idx != -1:
-                after_projects = next_part[sep_idx:]
-            else:
-                after_projects = ""
-            updated_readme = parts[0] + "## 🚀 My Projects – Ranked by Development Activity\n\n" + replacement + "\n\n" + after_projects
-        else:
-            updated_readme = readme_text + "\n\n## 🚀 My Projects – Ranked by Development Activity\n\n" + replacement
-            
+        # Fallback if markers missing
+        updated_readme = readme_text.replace("## 🚀 My Projects – Ranked by Development Activity", f"## 🚀 Top 4 Major Projects – Ranked by Development Activity\n\n{replacement}")
+        
+    # Ensure section header is clear:
+    updated_readme = updated_readme.replace("## 🚀 My Projects – Ranked by Development Activity", "## 🚀 Top 4 Major Projects – Ranked by Development Activity")
+    
     with open(readme_path, "w", encoding="utf-8") as f:
         f.write(updated_readme)
         
-    print(f"\nSuccessfully updated {readme_path}!")
+    print(f"\nSuccessfully updated {readme_path} with exactly 4 major projects!")
 
 if __name__ == "__main__":
     update_readme()
