@@ -63,9 +63,9 @@ def count_personal_commits(repo_name, username="ayush35099-cloud", token=None):
 MAJOR_PROJECTS_REGISTRY = {
     "BharatStore": {
         "display_name": "BharatStore (BharatKart)",
-        "tagline": "Cloud-Native Enterprise E-Commerce & Retail Marketplace Platform",
-        "description": "A cloud-native omni-channel marketplace platform connecting regional mega-stores and fulfillment hubs across India into a unified digital commerce engine. Engineered with event-driven messaging pipelines, real-time inventory synchronization, and distributed search indexing.",
-        "tech_stack": "Python, Flask 3.0, PostgreSQL, SQLite, Apache Kafka, OpenSearch 2.x, HTML5, CSS3",
+        "tagline": "Cloud-Native Enterprise E-Commerce Platform",
+        "description": "An omni-channel marketplace platform connecting regional stores across India with event-driven Kafka messaging, OpenSearch catalog indexing, and real-time inventory sync.",
+        "tech_stack": "Python, Flask 3.0, PostgreSQL, SQLite, Apache Kafka",
         "badges": [
             ("Python", "3776AB", "python", "white"),
             ("Flask", "000000", "flask", "white"),
@@ -78,15 +78,15 @@ MAJOR_PROJECTS_REGISTRY = {
         "primary_repos": ["BharatStore"]
     },
     "Ckd-Screening-System": {
-        "display_name": "RenalCare: Chronic Kidney Disease (CKD) Screening System",
-        "tagline": "Clinical ML Decision-Support Platform for Early Detection",
-        "description": "An applied machine learning decision-support platform designed to assist healthcare workers in Primary Health Centres (PHCs) and community diagnostic camps detect early physiological markers of Chronic Kidney Disease (CKD) using 24 routine laboratory parameters.",
-        "tech_stack": "Python 3.10+, Flask 3.0, Scikit-Learn 1.7, Machine Learning, Clinical Decision Support",
+        "display_name": "RenalCare: CKD Screening System",
+        "tagline": "Clinical ML Decision-Support Platform",
+        "description": "An applied machine learning decision-support platform designed to assist healthcare workers in primary health centres detect early physiological markers of CKD using 24 clinical parameters.",
+        "tech_stack": "Python 3.10+, Flask 3.0, Scikit-Learn 1.7, Clinical ML",
         "badges": [
             ("Python", "3776AB", "python", "white"),
             ("Flask", "000000", "flask", "white"),
             ("Scikit-Learn", "F7931E", "scikit-learn", "white"),
-            ("Healthcare ML", "00FF99", "python", "0D1117")
+            ("Clinical ML", "00FF99", "python", "0D1117")
         ],
         "repo_url": "https://github.com/ayush35099-cloud/Ckd-Screening-System",
         "demo_url": None,
@@ -94,9 +94,9 @@ MAJOR_PROJECTS_REGISTRY = {
         "primary_repos": ["Ckd-Screening-System"]
     },
     "Smart-Campus": {
-        "display_name": "Smart Campus Management & Student Attendance Portal",
-        "tagline": "Comprehensive Student Attendance & Academic Portal",
-        "description": "A centralized university academic portal engineered to automate student attendance computation, track course threshold eligibility, issue examination admittance notifications, and provide dedicated student and faculty session management.",
+        "display_name": "Smart Campus Attendance Portal",
+        "tagline": "Student Attendance & Academic Management Portal",
+        "description": "A centralized university management portal engineered to automate student attendance computation, track course threshold eligibility, issue exam alerts, and provide role-based authentication.",
         "tech_stack": "JavaScript, HTML5, CSS3, Responsive Design, Session Auth",
         "badges": [
             ("JavaScript", "F7DF1E", "javascript", "black"),
@@ -109,9 +109,9 @@ MAJOR_PROJECTS_REGISTRY = {
         "primary_repos": ["smart_campus_final_v2", "PYTHON_PROJECT1"]
     },
     "PredictED": {
-        "display_name": "PredictED: AI Academic Intelligence Dashboard",
-        "tagline": "AI-Powered Academic Analytics & Bunk Margin Prediction System",
-        "description": "An intelligent academic companion and decision dashboard engineered for university students. Features smart attendance analytics, predictive bunk calculations, automated threshold warning alerts, timetable scheduling, and an interactive AI study companion.",
+        "display_name": "PredictED: Academic AI Dashboard",
+        "tagline": "Academic Analytics & Bunk Margin Predictor",
+        "description": "An intelligent academic decision dashboard engineered for university students. Features smart attendance analytics, predictive bunk calculations, automated threshold warning alerts, and an AI study companion.",
         "tech_stack": "Python, Pandas, Scikit-Learn, Modern Web UI, AI Analytics",
         "badges": [
             ("Python", "3776AB", "python", "white"),
@@ -128,49 +128,54 @@ MAJOR_PROJECTS_REGISTRY = {
 
 MEDALS = ["🥇", "🥈", "🥉", "4️⃣"]
 
-def generate_top_4_markdown(projects_ranked):
+def generate_2x2_markdown(projects_ranked):
     lines = []
     lines.append('<div align="center">\n')
-    lines.append('  <p><i>Featured showcase of exactly <b>four major development projects</b>, evaluated and ranked strictly by verified development activity and personal commit volume.</i></p>\n')
+    lines.append('  <p><i>Featured showcase of four major development projects arranged in a 2&times;2 activity-ranked rectangular grid.</i></p>\n')
     lines.append('</div>\n\n')
+    
+    top4 = projects_ranked[:4]
     
     lines.append('<table width="100%">\n')
     
-    for i, p in enumerate(projects_ranked[:4]):
-        medal = MEDALS[i] if i < len(MEDALS) else f"#{i+1}"
-        rank_num = i + 1
-        name = p['display_name']
-        tagline = p['tagline']
-        desc = p['description']
-        tech = p['tech_stack']
-        commits = p['commits']
-        commit_str = f"{commits} Commits" if commits > 0 else "Active Flagship"
-        repo_url = p['repo_url']
-        badges = p['badges']
-        
-        badge_html = " ".join([
-            f'<img src="https://img.shields.io/badge/{b[0]}-{b[1]}?style=flat-square&logo={b[2]}&logoColor={b[3]}" alt="{b[0]}" />'
-            for b in badges
-        ])
-        
+    # 2 rows x 2 columns = 2x2 grid
+    for row_idx in range(0, len(top4), 2):
         lines.append('  <tr>\n')
-        lines.append('    <td width="100%" valign="top">\n')
-        lines.append(f'      <h3>{medal} {rank_num}. <a href="{repo_url}">{name}</a></h3>\n')
-        lines.append(f'      <p><b>{tagline}</b></p>\n')
-        lines.append(f'      <p>{desc}</p>\n')
-        lines.append(f'      <p><b>💻 Tech Stack:</b> <code>{tech}</code></p>\n')
-        lines.append(f'      <p><b>🔥 Personal Activity:</b> <img src="https://img.shields.io/badge/My_Commits-{commit_str.replace(" ", "_")}-00FF99?style=flat-square&logo=git&logoColor=0D1117" alt="Commits" /> &bull; <i>Rank #{rank_num} by development activity</i></p>\n')
-        lines.append(f'      <p>{badge_html}</p>\n')
-        lines.append('      <p>\n')
-        lines.append(f'        <a href="{repo_url}">\n')
-        lines.append('          <img src="https://img.shields.io/badge/View_Repository-00FF99?style=for-the-badge&logo=github&logoColor=0D1117" alt="View Repository" />\n')
-        lines.append('        </a>\n')
-        if p.get('demo_url'):
-            lines.append(f'        <a href="{p["demo_url"]}">\n')
-            lines.append('          <img src="https://img.shields.io/badge/Live_Demo-BC8CFF?style=for-the-badge&logo=firefox&logoColor=0D1117" alt="Live Demo" />\n')
+        for col_idx in range(row_idx, min(row_idx + 2, len(top4))):
+            p = top4[col_idx]
+            rank_num = col_idx + 1
+            medal = MEDALS[col_idx] if col_idx < len(MEDALS) else f"#{rank_num}"
+            name = p['display_name']
+            tagline = p['tagline']
+            desc = p['description']
+            tech = p['tech_stack']
+            commits = p['commits']
+            commit_str = f"{commits} Commits" if commits > 0 else "Active Flagship"
+            repo_url = p['repo_url']
+            badges = p['badges']
+            
+            badge_html = " ".join([
+                f'<img src="https://img.shields.io/badge/{b[0]}-{b[1]}?style=flat-square&logo={b[2]}&logoColor={b[3]}" alt="{b[0]}" />'
+                for b in badges
+            ])
+            
+            lines.append('    <td width="50%" valign="top">\n')
+            lines.append(f'      <h3 align="left">{medal} {rank_num}. <a href="{repo_url}">{name}</a></h3>\n')
+            lines.append(f'      <p><b>{tagline}</b></p>\n')
+            lines.append(f'      <p>{desc}</p>\n')
+            lines.append(f'      <p><b>💻 Tech:</b> <code>{tech}</code></p>\n')
+            lines.append(f'      <p><b>🔥 Activity:</b> <img src="https://img.shields.io/badge/My_Commits-{commit_str.replace(" ", "_")}-00FF99?style=flat-square&logo=git&logoColor=0D1117" alt="Commits" /></p>\n')
+            lines.append(f'      <p>{badge_html}</p>\n')
+            lines.append('      <p>\n')
+            lines.append(f'        <a href="{repo_url}">\n')
+            lines.append('          <img src="https://img.shields.io/badge/View_Repository-00FF99?style=for-the-badge&logo=github&logoColor=0D1117" alt="View Repository" />\n')
             lines.append('        </a>\n')
-        lines.append('      </p>\n')
-        lines.append('    </td>\n')
+            if p.get('demo_url'):
+                lines.append(f'        <a href="{p["demo_url"]}">\n')
+                lines.append('          <img src="https://img.shields.io/badge/Live_Demo-BC8CFF?style=for-the-badge&logo=firefox&logoColor=0D1117" alt="Live Demo" />\n')
+                lines.append('        </a>\n')
+            lines.append('      </p>\n')
+            lines.append('    </td>\n')
         lines.append('  </tr>\n')
         
     lines.append('</table>\n')
@@ -184,7 +189,7 @@ def update_readme(repo_dir=None):
     token = get_token()
     username = "ayush35099-cloud"
     
-    print(f"Evaluating top major projects for {username}...")
+    print(f"Evaluating top major projects for {username} in 2x2 grid...")
     project_scores = []
     
     for proj_id, meta in MAJOR_PROJECTS_REGISTRY.items():
@@ -212,11 +217,11 @@ def update_readme(repo_dir=None):
     # Select exactly the top 4
     top_4_projects = project_scores[:4]
     
-    print("\nSelected Top 4 Major Projects (Ranked):")
+    print("\nSelected Top 4 Major Projects (2x2 Grid):")
     for rank, p in enumerate(top_4_projects, 1):
         print(f"  Rank #{rank}: {p['display_name']} ({p['commits']} commits)")
         
-    new_content = generate_top_4_markdown(top_4_projects)
+    new_content = generate_2x2_markdown(top_4_projects)
     
     with open(readme_path, "r", encoding="utf-8") as f:
         readme_text = f.read()
@@ -228,15 +233,20 @@ def update_readme(repo_dir=None):
         updated_readme = re.sub(pattern, replacement, readme_text, flags=re.DOTALL)
     else:
         # Fallback if markers missing
-        updated_readme = readme_text.replace("## 🚀 My Projects – Ranked by Development Activity", f"## 🚀 Top 4 Major Projects – Ranked by Development Activity\n\n{replacement}")
+        updated_readme = readme_text.replace("## 🚀 Top 4 Major Projects – Ranked by Development Activity", f"## 🚀 Featured Projects – 2×2 Grid\n\n{replacement}")
         
     # Ensure section header is clear:
-    updated_readme = updated_readme.replace("## 🚀 My Projects – Ranked by Development Activity", "## 🚀 Top 4 Major Projects – Ranked by Development Activity")
+    updated_readme = re.sub(
+        r"## 🚀.*Projects.*",
+        "## 🚀 Featured Projects – 2×2 Activity Grid",
+        updated_readme,
+        count=1
+    )
     
     with open(readme_path, "w", encoding="utf-8") as f:
         f.write(updated_readme)
         
-    print(f"\nSuccessfully updated {readme_path} with exactly 4 major projects!")
+    print(f"\nSuccessfully updated {readme_path} with 2x2 grid layout!")
 
 if __name__ == "__main__":
     update_readme()
